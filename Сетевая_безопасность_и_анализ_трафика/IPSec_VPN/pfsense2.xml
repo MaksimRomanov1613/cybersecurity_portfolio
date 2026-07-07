@@ -1,0 +1,91 @@
+
+<filter>
+	<rule>
+		<type>pass</type>
+		<ipprotocol>inet</ipprotocol>
+		<descr><![CDATA[Default allow LAN to any rule]]></descr>
+		<interface>lan</interface>
+		<tracker>0100000101</tracker>
+		<source>
+			<network>lan</network>
+		</source>
+		<destination>
+			<any></any>
+		</destination>
+	</rule>
+	<rule>
+		<type>pass</type>
+		<ipprotocol>inet6</ipprotocol>
+		<descr><![CDATA[Default allow LAN IPv6 to any rule]]></descr>
+		<interface>lan</interface>
+		<tracker>0100000102</tracker>
+		<source>
+			<network>lan</network>
+		</source>
+		<destination>
+			<any></any>
+		</destination>
+	</rule>
+	<rule>
+		<id></id>
+		<tracker>1782447067</tracker>
+		<type>pass</type>
+		<interface>enc0</interface>
+		<ipprotocol>inet</ipprotocol>
+		<tag></tag>
+		<tagged></tagged>
+		<max></max>
+		<max-src-nodes></max-src-nodes>
+		<max-src-conn></max-src-conn>
+		<max-src-states></max-src-states>
+		<statetimeout></statetimeout>
+		<statetype><![CDATA[keep state]]></statetype>
+		<os></os>
+		<source>
+			<address>192.168.2.0/24</address>
+		</source>
+		<destination>
+			<address>192.168.1.0/24</address>
+		</destination>
+		<descr><![CDATA[Allow LAN2 to LAN1 via IPsec]]></descr>
+		<updated>
+			<time>1782447067</time>
+			<username><![CDATA[admin@192.168.2.100 (Local Database)]]></username>
+		</updated>
+		<created>
+			<time>1782447067</time>
+			<username><![CDATA[admin@192.168.2.100 (Local Database)]]></username>
+		</created>
+	</rule>
+	<rule>
+		<id></id>
+		<tracker>1782447100</tracker>
+		<type>pass</type>
+		<interface>enc0</interface>
+		<ipprotocol>inet</ipprotocol>
+		<tag></tag>
+		<tagged></tagged>
+		<max></max>
+		<max-src-nodes></max-src-nodes>
+		<max-src-conn></max-src-conn>
+		<max-src-states></max-src-states>
+		<statetimeout></statetimeout>
+		<statetype><![CDATA[keep state]]></statetype>
+		<os></os>
+		<source>
+			<address>192.168.1.0/24</address>
+		</source>
+		<destination>
+			<address>192.168.2.0/24</address>
+		</destination>
+		<descr><![CDATA[Allow LAN1 to LAN2 via IPsec]]></descr>
+		<updated>
+			<time>1782447100</time>
+			<username><![CDATA[admin@192.168.2.100 (Local Database)]]></username>
+		</updated>
+		<created>
+			<time>1782447100</time>
+			<username><![CDATA[admin@192.168.2.100 (Local Database)]]></username>
+		</created>
+	</rule>
+</filter>

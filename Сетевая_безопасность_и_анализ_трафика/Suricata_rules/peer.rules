@@ -1,0 +1,4 @@
+alert tcp any any -> any any (msg:"EvilBot User-Agent detected"; content:"EvilBot"; sid:1000001;)
+alert dns any any -> any any (msg:"DNS query to malicious domain"; dns.query; content:"malicious-domain.com"; sid:1000002;)
+alert tcp any any -> any 4444 (msg:"C2 handshake detected"; content:"C2: handshake"; sid:1000003;)
+alert icmp any any -> any any (msg:"ICMP tunnel detected"; content:"ICMP_TUNNEL_123456"; sid:1000004;)
